@@ -34,4 +34,3 @@ GIT_PS1_DESCRIBE_STYLE="branch"
 PROMPT_COMMAND='__git_ps1 "$BWhite[$BYellow\w$BWhite]$(parse_git_status)" " $Color_Off\\\\$"'
 
 source /opt/boxen/env.sh
-source ~/.localrc
