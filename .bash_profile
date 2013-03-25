@@ -1,5 +1,5 @@
 source ~/.bash_colors
-source /opt/boxen/homebrew/share/git-core/contrib/completion/git-prompt.sh
+source /opt/boxen/homebrew/etc/bash_completion.d/git-prompt.sh
 source /opt/boxen/homebrew/etc/bash_completion.d/git-completion.bash
 
 
