@@ -2,7 +2,6 @@ source ~/.bash_colors
 source /opt/boxen/homebrew/share/git-core/contrib/completion/git-prompt.sh
 source /opt/boxen/homebrew/etc/bash_completion.d/git-completion.bash
 
-export NODE_PATH=/usr/local/lib/node_modules
 
 parse_git_status() {
 if [ ! -d "$PWD/.git" ]
