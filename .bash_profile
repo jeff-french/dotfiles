@@ -1,7 +1,7 @@
+source ~/.bashrc
 source ~/.bash_colors
-source /opt/boxen/homebrew/etc/bash_completion.d/git-prompt.sh
-source /opt/boxen/homebrew/etc/bash_completion.d/git-completion.bash
-
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
 
 parse_git_status() {
 if [ ! -d "$PWD/.git" ]
@@ -32,5 +32,9 @@ GIT_PS1_SHOWUPSTREAM="auto git verbose"
 GIT_PS1_DESCRIBE_STYLE="branch"
 PROMPT_COMMAND='__git_ps1 "$BWhite[$BYellow\w$BWhite]$(parse_git_status)" " $Color_Off\\\\$"'
 
-source /opt/boxen/env.sh
-source /opt/boxen/nvm/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
+
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+

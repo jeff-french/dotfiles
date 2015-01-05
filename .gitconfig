@@ -1,0 +1,35 @@
+
+[hub]
+protocol = https
+
+[credential]
+
+[core]
+	excludesfile = /Users/jeff-french/.gitignore_global
+	editor = vi
+[user]
+	name = Jeff French
+	email = jeff.french@moonswitch.com
+[diff]
+	tool = diffmerge
+[difftool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --nosplash \"$LOCAL\" \"$REMOTE\"
+	path = 
+[difftool "diffmerge"]
+	cmd = /usr/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "sourcetree"]
+	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+[mergetool "diffmerge"]
+	cmd = /usr/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[alias]
+	tree = log --graph --all --decorate --pretty=oneline
+	last = log -1 HEAD
