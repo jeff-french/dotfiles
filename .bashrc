@@ -20,3 +20,7 @@ shopt -s histappend
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+#Use nvm for managing Node version
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh

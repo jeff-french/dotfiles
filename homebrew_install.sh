@@ -70,20 +70,25 @@ apps=(
   iterm2
   qlprettypatch
   shiori
-  sublime-text3
+  sublime-text
   virtualbox
   atom
   flux
   mailbox
   qlstephen
   sketch
-  tower
+  sourcetree
   vlc
   cloudup
   nvalt
   quicklook-json
   skype
   transmission
+  webstorm
+  hipchat
+  rubymine
+  1password
+  java
 )
 
 # Install apps to /Applications
@@ -106,4 +111,4 @@ fonts=(
 # install fonts
 echo "installing fonts..."
 brew cask install ${fonts[@]}
-https://github.com/caskroom/homebrew-fonts/tree/master/Casks
+#https://github.com/caskroom/homebrew-fonts/tree/master/Casks

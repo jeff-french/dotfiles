@@ -12,7 +12,7 @@ ln -s ${BASEDIR}/.gitignore ~/
 # ruby
 ln -s ${BASEDIR}/.gemrc ~/
 ln -s ${BASEDIR}/.irbrc ~/
-ls -s ${BASEDIR}/.railsrc ~/
+ln -s ${BASEDIR}/.railsrc ~/
 
 #web pullers
 ln -s ${BASEDIR}/.curlrc ~/
