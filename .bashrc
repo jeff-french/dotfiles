@@ -24,3 +24,10 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #Use nvm for managing Node version
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export LIQUIBASE_HOME=/usr/local/Cellar/liquibase/3.3.1/libexec
+export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/jfrench/.nvm/v0.10.35/bin:/Users/jfrench/.rvm/gems/ruby-2.2.0/bin:/Users/jfrench/.rvm/gems/ruby-2.2.0@global/bin:/Users/jfrench/.rvm/rubies/ruby-2.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jfrench/.rvm/bin:/Users/jfrench/.rvm/bin
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/jfrench/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1

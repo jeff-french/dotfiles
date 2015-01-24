@@ -5,7 +5,7 @@ protocol = https
 [credential]
 
 [core]
-	excludesfile = /Users/jeff-french/.gitignore_global
+	excludesfile = /Users/jfrench/.gitignore_global
 	editor = vi
 [user]
 	name = Jeff French
@@ -23,7 +23,7 @@ protocol = https
 	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.4/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [mergetool "diffmerge"]
-	cmd = /usr/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [push]
 	default = simple
