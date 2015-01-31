@@ -26,6 +26,9 @@ ln -s ${BASEDIR}/.bash_colors ~/
 ln -s ${BASEDIR}/.git-completion.bash ~/
 ln -s ${BASEDIR}/.git-prompt.sh ~/
 
+#vim
+ln -s ${BASEDIR}/.vim ~/
+ln -s ${BASEDIR}/.vimrc ~/
 
 #postgres
 ln -s ${BASEDIR}/.psqlrc ~/
