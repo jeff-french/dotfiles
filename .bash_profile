@@ -30,7 +30,7 @@ GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWCOLORHINTS=
 GIT_PS1_SHOWUPSTREAM="auto git verbose"
 GIT_PS1_DESCRIBE_STYLE="branch"
-PROMPT_COMMAND='__git_ps1 "$BWhite[$BYellow\w$BWhite]$(parse_git_status)" " $Color_Off\\\\$"'
+PROMPT_COMMAND='__git_ps1 "$BWhite[$ICyan\h$BWhite:$BYellow\w$BWhite]$(parse_git_status)" " $Color_Off\\\\$ "'
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
