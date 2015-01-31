@@ -1,6 +1,3 @@
-#PS1="\[\e[01;32m\]\u@\h \[\e[01;34m\]\W \`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]:)'; else echo -e '\[\e[01;31m\]:('; fi\` \[\e[01;34m\]$\[\e[00m\]"
-
-export BUNDLER_EDITOR=subl
 
 #ruby garbage collection hacks
 export RUBY_HEAP_MIN_SLOTS=1000000
@@ -23,11 +20,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #Use nvm for managing Node version
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-export LIQUIBASE_HOME=/usr/local/Cellar/liquibase/3.3.1/libexec
-export PATH=/Applications/Postgres.app/Contents/Versions/9.4/bin:/Users/jfrench/.nvm/v0.10.35/bin:/Users/jfrench/.rvm/gems/ruby-2.2.0/bin:/Users/jfrench/.rvm/gems/ruby-2.2.0@global/bin:/Users/jfrench/.rvm/rubies/ruby-2.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jfrench/.rvm/bin:/Users/jfrench/.rvm/bin
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/jfrench/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+if [[ -s "$NVM_DIR/nvm.sh" ]] ; then source "$NVM_DIR/nvm.sh" ; fi
+
+#Use .bash_local for things that are machine or OS specific so this file can be shared in the dotfiles repo.
+if [[ -s "$HOME/.bash_local" ]] ; then source "$HOME/.bash_local" ; fi
+
