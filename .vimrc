@@ -21,6 +21,17 @@ Plugin 'editorconfig/editorconfig-vim'
 
 " File Explorer
 Plugin 'scrooloose/nerdtree'
+
+" Status Line
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
+
+" Ctrl P to search for stuff
+Plugin 'kien/ctrlp.vim'
+
+" LESS syntax highlighting
+Plugin 'groenewege/vim-less'
+
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -63,9 +74,43 @@ set number
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 " Map Ctrl+n to NerdTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Map Ctrl+M to next buffer
+map <C-m> :bnext<CR>
+
+" Syntastic Config
 " Enable syntastic checkers for different files.
 let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_less_checkers = ['recess']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Ctrl-P config
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+let g:bufferline_echo = 0
+" airline config
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#bufferline#enabled = 1
+"let g:airline#extensions#bufferline#overwrite_variables = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#mixed_indent_algo = 0
+let g:airline#extensions#tabline#show_tab_type = 1
+
 " Auto change the directory to the current file I'm working on
 autocmd BufEnter * lcd %:p:h 
