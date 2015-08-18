@@ -29,6 +29,8 @@ ln -s ${BASEDIR}/.git-prompt.sh ~/
 #vim
 ln -s ${BASEDIR}/.vim ~/
 ln -s ${BASEDIR}/.vimrc ~/
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
 
 #postgres
 ln -s ${BASEDIR}/.psqlrc ~/
