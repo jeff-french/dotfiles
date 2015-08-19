@@ -13,5 +13,10 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Vim stuff
 .vim/.netrwhist
 .vim/bundle/
+*.swp
+
+# Webstorm files
+.idea/
