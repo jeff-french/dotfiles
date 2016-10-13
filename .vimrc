@@ -32,6 +32,18 @@ Plugin 'kien/ctrlp.vim'
 " LESS syntax highlighting
 Plugin 'groenewege/vim-less'
 
+" Code completion
+Plugin 'Valloric/YouCompleteMe'
+
+" Yaml indenting
+Plugin 'shmay/vim-yaml'
+
+" Dracula theme
+Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
+
+Plugin 'altercation/vim-colors-solarized', {'rtp': 'vim/'}
+
+Plugin 'mileszs/ack.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -62,11 +74,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+set tabstop=4
 
 " Enable syntaxt highlighting
 syntax enable
 " Set custom color scheme
-colorscheme molokai 
+colorscheme dracula
 " Set vim to show active line number and relative line numbers
 set relativenumber
 set number
@@ -99,18 +112,12 @@ let g:syntastic_check_on_wq = 0
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
-let g:bufferline_echo = 0
 " airline config
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#bufferline#enabled = 1
-"let g:airline#extensions#bufferline#overwrite_variables = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#whitespace#mixed_indent_algo = 0
 let g:airline#extensions#tabline#show_tab_type = 1
 
-" Auto change the directory to the current file I'm working on
-autocmd BufEnter * lcd %:p:h 
+" Set font for MacVim
+set guifont=Hack:h12
