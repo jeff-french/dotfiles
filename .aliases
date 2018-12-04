@@ -1,0 +1,4 @@
+alias kc='kubectl'
+alias dc='docker-compose'
+alias tf='terraform'
+alias flushdns='sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache'

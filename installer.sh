@@ -19,9 +19,9 @@ ln -s ${BASEDIR}/.curlrc ~/
 ln -s ${BASEDIR}/.wgetrc ~/
 
 #bashy
-#ln -s ${BASEDIR}/.aliases ~/
+ln -s ${BASEDIR}/.aliases ~/
 ln -s ${BASEDIR}/.bash_profile ~/
-#ln -s ${BASEDIR}/.bashrc ~/
+ln -s ${BASEDIR}/.bashrc ~/
 ln -s ${BASEDIR}/.bash_colors ~/
 ln -s ${BASEDIR}/.git-completion.bash ~/
 ln -s ${BASEDIR}/.git-prompt.sh ~/
