@@ -24,7 +24,3 @@ if [[ -s "$NVM_DIR/nvm.sh" ]] ; then source "$NVM_DIR/nvm.sh" ; fi
 
 #Use .bash_local for things that are machine or OS specific so this file can be shared in the dotfiles repo.
 if [[ -s "$HOME/.bash_local" ]] ; then source "$HOME/.bash_local" ; fi
-
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
