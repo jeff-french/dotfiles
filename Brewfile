@@ -8,9 +8,15 @@ upgrade
 
 #installs
 install git
-install ponysay
 install bash
-install sqlite
+install nvm
+install vim
+install wget
+install python
+install terraform
+install kubernetes-cli
+install kubernetes-helm
+install kubernetes-service-catalog-client
 
 
 # Remove outdated versions from the cellar

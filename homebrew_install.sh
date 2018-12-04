@@ -9,34 +9,18 @@ fi
 brew update
 
 
-# Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
-
-# Install Bash 4
-brew install bash
-
-# Install more recent versions of some OS X tools
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep
-
-
 binaries=(
-  graphicsmagick
-  webkit2png
-  rename
-  zopfli
-  ffmpeg
+  coreutils
   python
-  sshfs
-  trash
-  node
-  tree
-  ack
-  hub
   git
+  bash
+  nvm
+  vim
+  wget
+  terraform
+  kubernetes-cli
+  kubernetes-helm
+  kubernetes-service-catalog-client
 )
 
 echo "installing binaries..."
@@ -44,68 +28,16 @@ brew install ${binaries[@]}
 
 brew cleanup
 
+brew tap homebrew/cask-fonts
 
-
-brew install caskroom/cask/brew-cask
-
-
-# Apps
-apps=(
-  alfred
-  dropbox
-  google-chrome
-  qlcolorcode
-  screenflick
-  slack
-  transmit
-  appcleaner
-  firefox
-  hazel
-  qlmarkdown
-  seil
-  spotify
-  vagrant
-  arq
-  flash
-  iterm2
-  qlprettypatch
-  shiori
-  sublime-text
-  virtualbox
-  atom
-  flux
-  mailbox
-  qlstephen
-  sketch
-  sourcetree
-  vlc
-  cloudup
-  nvalt
-  quicklook-json
-  skype
-  transmission
-  webstorm
-  hipchat
-  rubymine
-  1password
-  java
-)
-
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
-echo "installing apps..."
-brew cask install --appdir="/Applications" ${apps[@]}
-
-
-
-
-brew tap caskroom/fonts
-brew cask search /font-roboto/
 # fonts
 fonts=(
   font-m-plus
   font-clear-sans
   font-roboto
+  font-sourcecodepro-nerd-font
+  font-sourcecodepro-nerd-font-mono
+  font-source-code-pro-for-powerline
 )
 
 # install fonts
