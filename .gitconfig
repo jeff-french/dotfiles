@@ -1,13 +1,12 @@
 
 [hub]
-protocol = https
 	host = github.ua.com
 
 [credential]
 
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vi
+	editor = vim 
 [user]
 	name = Jeff French
 	email = jeff.french@moonswitch.com
@@ -21,7 +20,7 @@ protocol = https
 [merge]
 	tool = diffmerge
 [mergetool "sourcetree"]
-	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Users/jfrench/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [mergetool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
@@ -32,5 +31,11 @@ protocol = https
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [alias]
-	tree = log --graph --all --decorate --pretty=oneline
+	tree = log --graph --all --decorate --pretty=oneline --no-merges --max-count 25
+	treem = log --graph --all --decorate --pretty=oneline --max-count 25
 	last = log -1 HEAD
+	corm = !sh -c 'git checkout $1 && git rebase next && git checkout next && git merge --ff-only @{-1}' --
+	s = status --short
+
+[diff "sopsdiffer"]
+	textconv = sops -d
