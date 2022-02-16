@@ -1,7 +1,3 @@
-
-[hub]
-	host = github.ua.com
-
 [credential]
 
 [core]
@@ -12,29 +8,17 @@
 	email = jeff.french@moonswitch.com
 [diff]
 	tool = diffmerge
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 [difftool "diffmerge"]
 	cmd = /usr/bin/diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = diffmerge
-[mergetool "sourcetree"]
-	cmd = /Users/jfrench/Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [mergetool "diffmerge"]
 	cmd = /usr/local/bin/diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
 [push]
 	default = simple
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
 [alias]
-	tree = log --graph --all --decorate --pretty=oneline --no-merges --max-count 25
-	treem = log --graph --all --decorate --pretty=oneline --max-count 25
 	last = log -1 HEAD
-	corm = !sh -c 'git checkout $1 && git rebase next && git checkout next && git merge --ff-only @{-1}' --
 	s = status --short
 
 [diff "sopsdiffer"]
