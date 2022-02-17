@@ -24,6 +24,9 @@ ln -sf ${BASEDIR}/.bashrc ~/
 #ln -sf ${BASEDIR}/.git-completion.bash ~/
 #ln -sf ${BASEDIR}/.git-prompt.sh ~/
 
+# asdf
+ln -sf ${BASEDIR}/.asdfrc ~/
+
 # zsh
 # TODO: add zsh and omyzsh configs
 
