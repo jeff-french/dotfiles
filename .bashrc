@@ -15,12 +15,9 @@ export HISTCONTROL=erasedups
 # Append to history file
 shopt -s histappend
 
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-#Use nvm for managing Node version
-export NVM_DIR=~/.nvm
-if [[ -s "$NVM_DIR/nvm.sh" ]] ; then source "$NVM_DIR/nvm.sh" ; fi
+# asdf config
+source ${ASDF_DIR:-$HOME/.asdf}/asdf.sh
+source ${ASDF_DIR:-$HOME/.asdf}/completions/asdf.bash
 
 #Use .bash_local for things that are machine or OS specific so this file can be shared in the dotfiles repo.
 if [[ -s "$HOME/.bash_local" ]] ; then source "$HOME/.bash_local" ; fi
