@@ -16,13 +16,9 @@ ln -sf ${BASEDIR}/.railsrc ~/
 ln -sf ${BASEDIR}/.curlrc ~/
 ln -sf ${BASEDIR}/.wgetrc ~/
 
-#bashy
+# aliases
 ln -sf ${BASEDIR}/.aliases ~/
-#ln -sf ${BASEDIR}/.bash_profile ~/
-ln -sf ${BASEDIR}/.bashrc ~/
-#ln -sf ${BASEDIR}/.bash_colors ~/
-#ln -sf ${BASEDIR}/.git-completion.bash ~/
-#ln -sf ${BASEDIR}/.git-prompt.sh ~/
+
 
 # asdf
 ln -sf ${BASEDIR}/.asdfrc ~/
@@ -39,3 +35,14 @@ ln -sf ${BASEDIR}/.asdfrc ~/
 #postgres
 ln -sf ${BASEDIR}/.psqlrc ~/
 
+# coder workspace only
+if [ -z "$CODER_WORKSPACE_ID" ] then
+    echo "Not a coder workspace."
+else 
+    ln -sf ${BASEDIR}/.bash_profile ~/
+    ln -sf ${BASEDIR}/.bashrc ~/
+    ln -sf ${BASEDIR}/.bash_colors ~/
+    ln -sf ${BASEDIR}/.git-completion.bash ~/
+    ln -sf ${BASEDIR}/.git-prompt.sh ~/
+    mv /opt/asdf/.tool-versions ${HOME}/.tool-versions
+fi

@@ -1,9 +1,0 @@
-#!/bin/bash
-
-echo "--Starting personalize"
-
-# link asdf default .tool-versions file to home folder
-ln -s ${ASDF_DIR}/.tool-versions ${HOME}/.tool-versions
-
-# Run installer script
-./installer.sh
