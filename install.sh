@@ -36,9 +36,7 @@ ln -sf ${BASEDIR}/.asdfrc ~/
 ln -sf ${BASEDIR}/.psqlrc ~/
 
 # coder workspace only
-if [ -z "$CODER_WORKSPACE_ID" ] then
-    echo "Not a coder workspace."
-else 
+if [[ ! -z "$CODER_WORKSPACE_ID" ]]; then
     ln -sf ${BASEDIR}/.bash_profile ~/
     ln -sf ${BASEDIR}/.bashrc ~/
     ln -sf ${BASEDIR}/.bash_colors ~/
