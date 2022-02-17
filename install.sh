@@ -3,36 +3,36 @@
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # git
-#ln -s ${BASEDIR}/.git ~/
-ln -s ${BASEDIR}/.gitconfig ~/
-ln -s ${BASEDIR}/.gitignore_global ~/
+#ln -sf ${BASEDIR}/.git ~/
+ln -sf ${BASEDIR}/.gitconfig ~/
+ln -sf ${BASEDIR}/.gitignore_global ~/
 
 # ruby
-ln -s ${BASEDIR}/.gemrc ~/
-ln -s ${BASEDIR}/.irbrc ~/
-ln -s ${BASEDIR}/.railsrc ~/
+ln -sf ${BASEDIR}/.gemrc ~/
+ln -sf ${BASEDIR}/.irbrc ~/
+ln -sf ${BASEDIR}/.railsrc ~/
 
 #web pullers
-ln -s ${BASEDIR}/.curlrc ~/
-ln -s ${BASEDIR}/.wgetrc ~/
+ln -sf ${BASEDIR}/.curlrc ~/
+ln -sf ${BASEDIR}/.wgetrc ~/
 
 #bashy
-ln -s ${BASEDIR}/.aliases ~/
-#ln -s ${BASEDIR}/.bash_profile ~/
-#ln -s ${BASEDIR}/.bashrc ~/
-#ln -s ${BASEDIR}/.bash_colors ~/
-#ln -s ${BASEDIR}/.git-completion.bash ~/
-#ln -s ${BASEDIR}/.git-prompt.sh ~/
+ln -sf ${BASEDIR}/.aliases ~/
+#ln -sf ${BASEDIR}/.bash_profile ~/
+ln -sf ${BASEDIR}/.bashrc ~/
+#ln -sf ${BASEDIR}/.bash_colors ~/
+#ln -sf ${BASEDIR}/.git-completion.bash ~/
+#ln -sf ${BASEDIR}/.git-prompt.sh ~/
 
 # zsh
 # TODO: add zsh and omyzsh configs
 
 #vim
-#ln -s ${BASEDIR}/.vim ~/
-#ln -s ${BASEDIR}/.vimrc ~/
+#ln -sf ${BASEDIR}/.vim ~/
+#ln -sf ${BASEDIR}/.vimrc ~/
 #git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #vim +PluginInstall +qall
 
 #postgres
-ln -s ${BASEDIR}/.psqlrc ~/
+ln -sf ${BASEDIR}/.psqlrc ~/
 
