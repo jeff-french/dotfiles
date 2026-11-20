@@ -18,6 +18,10 @@ ln -sf ${BASEDIR}/.wgetrc ~/
 
 # aliases
 ln -sf ${BASEDIR}/.aliases ~/
+ln -sf ${BASEDIR}/clearaws.sh ~/
+
+# aws
+ln -sf ${BASEDIR}/aws_login.sh ~/
 
 
 # zsh

@@ -28,7 +28,7 @@ if command -v op >/dev/null && [ -f ~/.config/zsh/secrets.zsh.tpl ]; then
   if _op_secrets=$(op inject -i ~/.config/zsh/secrets.zsh.tpl); then  # op's errors go to stderr
     eval "$_op_secrets"
   else
-    echo "1Password: secrets not loaded, see op error above (template: ~/dotfiles/secrets.zsh.tpl)" >&2
+    echo "1Password: secrets not loaded, see op error above (template: ~/.config/zsh/secrets.zsh.tpl)" >&2
   fi
   unset _op_secrets
 fi
@@ -39,7 +39,7 @@ fi
 #   $1 = SSO session name in ~/.aws/config (e.g., moonswitch, otto)
 #   $2 = Chrome profile directory name (e.g., "Moonswitch", "Otto", "Default", "Profile 1")
 aws_sso_login_with_chrome () {
-  bash ~/dotfiles/aws_login.sh "$1" "$2"
+  bash ~/aws_login.sh "$1" "$2"
 }
 
 # convenience wrappers
