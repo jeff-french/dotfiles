@@ -20,14 +20,13 @@ ln -sf ${BASEDIR}/.wgetrc ~/
 ln -sf ${BASEDIR}/.aliases ~/
 
 
-# asdf
-ln -sf ${BASEDIR}/.asdfrc ~/
-
 # zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ln -sf ${BASEDIR}/.p10k.zsh ~/
 ln -sf ${BASEDIR}/.zshrc ~/
+mkdir -p ~/.config/zsh
+ln -sf ${BASEDIR}/secrets.zsh.tpl ~/.config/zsh/
 
 # iTerm Colors
 git clone git@github.com:mbadolato/iTerm2-Color-Schemes.git ~/iTerm2-Color-Schemes
