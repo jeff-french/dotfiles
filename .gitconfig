@@ -5,7 +5,16 @@
 	editor = vim 
 [user]
 	name = Jeff French
-	email = jeff.french@moonswitch.com
+	email = 209994+jeff-french@users.noreply.github.com
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG9OtpQYCMjgKIeFj4j2Ch8PzIPyZdNndWseSbxc5XD3
+[gpg]
+        format = ssh
+
+[gpg "ssh"]
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+        gpgsign = true
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]
@@ -23,3 +32,5 @@
 
 [diff "sopsdiffer"]
 	textconv = sops -d
+[pull]
+	rebase = true
