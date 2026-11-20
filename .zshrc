@@ -39,7 +39,7 @@ fi
 #   $1 = SSO session name in ~/.aws/config (e.g., moonswitch, otto)
 #   $2 = Chrome profile directory name (e.g., "Moonswitch", "Otto", "Default", "Profile 1")
 aws_sso_login_with_chrome () {
-  bash ~/aws_login.sh "$1" "$2"
+  bash ~/dotfiles/aws_login.sh "$1" "$2"
 }
 
 # convenience wrappers
