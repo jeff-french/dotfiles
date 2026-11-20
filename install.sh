@@ -29,6 +29,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 ln -sf ${BASEDIR}/.p10k.zsh ~/
 ln -sf ${BASEDIR}/.zshrc ~/
+ln -sf ${BASEDIR}/.zprofile ~/
 mkdir -p ~/.config/zsh
 ln -sf ${BASEDIR}/secrets.zsh.tpl ~/.config/zsh/
 
