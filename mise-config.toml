@@ -1,0 +1,25 @@
+# Global tools (migrated from asdf ~/.tool-versions and Homebrew, 2026-11-20)
+
+[tools]
+# --- from asdf (versions kept as they were) ---
+node = "22.12.0"
+kubectl = "1.30.5"
+terraform = "1.10.1"
+flux2 = "2.5.1"
+
+# --- moved from Homebrew ---
+yarn = "latest"
+awscli = "latest"
+helm = "latest"
+kustomize = "latest"
+argocd = "latest"
+kube-linter = "latest"
+kubeconform = "latest"
+terraform-docs = "latest"
+gh = "latest"
+jq = "latest"
+shellcheck = "latest"
+yamlfmt = "latest"
+pre-commit = "latest"
+python = "latest"
+op = "latest"

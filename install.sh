@@ -32,6 +32,33 @@ ln -sf ${BASEDIR}/.zshrc ~/
 mkdir -p ~/.config/zsh
 ln -sf ${BASEDIR}/secrets.zsh.tpl ~/.config/zsh/
 
+# tools (macOS): Homebrew for what mise/uv can't manage, mise for languages and CLIs,
+# uv for Python CLI tools. Each installs from its official installer.
+if [[ "$(uname)" == "Darwin" ]]; then
+    ln -sf ${BASEDIR}/Brewfile ~/
+    mkdir -p ~/.config/mise
+    ln -sf ${BASEDIR}/mise-config.toml ~/.config/mise/config.toml
+
+    if [[ ! -x /opt/homebrew/bin/brew ]]; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    brew bundle --file=~/Brewfile
+
+    [[ -x ~/.local/bin/mise ]] || curl -fsSL https://mise.run | sh
+    [[ -x ~/.local/bin/uv ]] || curl -LsSf https://astral.sh/uv/install.sh | sh
+    ~/.local/bin/mise install
+
+    # Python CLI tools, each on its own uv-managed Python
+    uv_tool() { ~/.local/bin/uv tool install --managed-python "$@"; }
+    uv_tool httpie
+    uv_tool it2
+    uv_tool kubernetes-validate
+    uv_tool --python 3.13 flux-local            # 7.x breaks on Python 3.14
+    uv_tool --python 3.13 --with "mcp<2" \
+        "git+https://github.com/elvismdev/mem0-mcp-selfhosted.git"   # needs the mcp 1.x API
+fi
+
 # iTerm Colors
 git clone git@github.com:mbadolato/iTerm2-Color-Schemes.git ~/iTerm2-Color-Schemes
 ~/iTerm2-Color-Schemes/tools/import-scheme.sh 'Solarized Dark - Patched'
